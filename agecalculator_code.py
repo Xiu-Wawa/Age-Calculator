@@ -47,7 +47,7 @@ def agecalculator():
     name = nameEntry.get()
     currentdate = datetime.date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day)
     ymd = datetime.date(int(yearEntry.get()), int(monthEntry.get()), int(dateEntry.get()))
-    age =(currentdate - ymd).days/365
+    age =(currentdate - ymd).days//365
     messagebox.showinfo(title="Age", message=f"{name} you are {round(age)} years old!!")
 agecal.config(command=agecalculator)
 
